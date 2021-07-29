@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Значение tel (input-type)</title>
+<script>
+  !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on","addSourceMiddleware","addIntegrationMiddleware","setAnonymousId","addDestinationMiddleware"];analytics.factory=function(e){return function(){var t=Array.prototype.slice.call(arguments);t.unshift(e);analytics.push(t);return analytics}};for(var e=0;e<analytics.methods.length;e++){var key=analytics.methods[e];analytics[key]=analytics.factory(key)}analytics.load=function(key,e){var t=document.createElement("script");t.type="text/javascript";t.async=!0;t.src="https://cdn.segment.com/analytics.js/v1/" + key + "/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n);analytics._loadOptions=e};analytics._writeKey="Vg4CwB0LM7xTxHM9B7MPfjIC7yzrWTUA";analytics.SNIPPET_VERSION="4.13.2";
+  analytics.load("Vg4CwB0LM7xTxHM9B7MPfjIC7yzrWTUA");
+  analytics.page();
+  }}();
+</script>
+</head>
+<body>
+<h1>Пример с полем ввода телефонного номера "type=tel"</h1>
+<form action="/examples/php-scripts/telephone.php" method="post">
+<fieldset> <legend>Введите ваш номер телефона</legend>
+<p><input type="tel" name="phone_number" list="tel-list" placeholder="+7 (900) 123-45-67" pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}"></p>
+<datalist id="tel-list">
+<option value="+7 (900) 123-45-67" label="Телефонный номер №1">
+<option value="+7 (900) 123-45-68" label="Телефонный номер №2">
+</datalist>
+</fieldset>
+<p><input type="reset"> <input type="submit"></p>
+</form>
+</body>
+</html>
